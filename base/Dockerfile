@@ -10,7 +10,7 @@ COPY config /root/.ssh/
 RUN cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 RUN chmod 0600 ~/.ssh/authorized_keys
 
-RUN wget --no-verbose http://apache-mirror.8birdsvideo.com/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz && tar -xvzf hadoop-2.7.7.tar.gz && mv hadoop-2.7.7 hadoop && rm hadoop-2.7.7.tar.gz && rm -rf hadoop/share/doc/*
+RUN wget --no-verbose https://archive.apache.org/dist/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz && tar -xvzf hadoop-2.7.7.tar.gz && mv hadoop-2.7.7 hadoop && rm hadoop-2.7.7.tar.gz && rm -rf hadoop/share/doc/*
 RUN ln -s /hadoop/etc/hadoop /etc/hadoop
 RUN mkdir -p /logs
 RUN mkdir /hadoop-data
