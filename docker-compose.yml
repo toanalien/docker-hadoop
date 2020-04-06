@@ -3,6 +3,7 @@ version: '3'
 services:
   namenode:
     image: hdfs-namenode
+    hostname: hdfs
     ports:
       - "9000:9000"
       - "50070:50070"
